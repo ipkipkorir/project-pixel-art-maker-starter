@@ -4,7 +4,10 @@
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid() {
-
-// Your code goes here!
+  var height = $('inputHeight').val();
+  var width = $('inputWeight').val();
+  
+  
+  // Your code goes here!
 
 }
