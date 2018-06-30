@@ -31,4 +31,3 @@ function makeGrid(n, m)
       }
   }
 }
-
