@@ -1,13 +1,14 @@
 // Select color input
 // Select size input
-
-// When size is submitted by the user, call makeGrid()
-
-
-function makeGrid() {
+  var color = $('colorPicker').val();
   var height = $('inputHeight').val();
   var width = $('inputWeight').val();
   
+// When size is submitted by the user, call makeGrid()
+$('sizePicker').submit();
+
+function makeGrid() {
+
   while(var i = 1; i <= height; i++)
   {
       $('#pixelCanvas').append('<tr></tr>');
