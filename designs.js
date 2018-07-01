@@ -4,7 +4,7 @@ var height;
 var width;
 var color;
  
-$('sizePicker').submit(function (event) {
+$('#sizePicker').submit(function (event) {
     event.preventDefault();
     height = $('#inputHeight').val();
     width = $('#inputWeight').val();  
