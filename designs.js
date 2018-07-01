@@ -10,12 +10,10 @@ $('sizePicker').submit(function (event) {
     width = $('inputWeight').val();  
     makeGrid(height, width);
 });
-$('td').click(function addColor() 
-              {
+$('td').click(function addColor() {
  var color = $('colorPicker').val();
- if(color.attr('style'))
- {
-  color.removeAtrr('style');
+ if(color.attr('style')) {
+  color.removeAttr('style');
  }
  else{
   color.attr('style', 'background-color:' + color);
@@ -25,12 +23,13 @@ $('td').click(function addColor()
 
 function makeGrid(n, m) 
 { 
-  while(var i = 1; i <= n; i++)
+  while(n > 0)
   {
       $('#pixelCanvas').append('<tr></tr>');
-      for(var j = 1; j <= m; j++)
+      for(var i = 1; i <= m; i++)
       {
         $('tr:last').append('<td></td>');
       }
+   n--;
   }
 }
