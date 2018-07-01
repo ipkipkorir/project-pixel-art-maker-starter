@@ -6,8 +6,8 @@ var color;
  
 $('sizePicker').submit(function (event) {
     event.preventDefault();
-    height = $('inputHeight').val();
-    width = $('inputWeight').val();  
+    height = $('#inputHeight').val();
+    width = $('#inputWeight').val();  
     makeGrid(height, width);
 });
 
@@ -27,7 +27,7 @@ function makeGrid(n, m)
  
  //Adding color to cells
  $('td').click(function addColor() {
- color = $('colorPicker').val();
+ color = $('#colorPicker').val();
  if( $(this).attr('style')) {
   $(this).removeAttr('style');
  }
