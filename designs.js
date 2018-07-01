@@ -1,10 +1,13 @@
 // Select color input
 // Select size input
+var height;
+var width;
+var color;
  
 $('sizePicker').submit(function (event) {
     event.preventDefault();
-    var height = $('inputHeight').val();
-    var width = $('inputWeight').val();  
+    height = $('inputHeight').val();
+    width = $('inputWeight').val();  
     makeGrid(height, width);
 });
 $('td').click(function addColor() 
