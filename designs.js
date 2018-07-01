@@ -10,15 +10,7 @@ $('sizePicker').submit(function (event) {
     width = $('inputWeight').val();  
     makeGrid(height, width);
 });
-$('td').click(function addColor() {
- color = $('colorPicker').val();
- if( $(this).attr('style')) {
-  $(this).removeAttr('style');
- }
- else{
-  $(this).attr('style', 'background-color:' + color);
- }
-});
+
 // When size is submitted by the user, call makeGrid()
 
 function makeGrid(n, m) 
@@ -32,4 +24,15 @@ function makeGrid(n, m)
       }
    n--;
   }
+ 
+ //Adding color to cells
+ $('td').click(function addColor() {
+ color = $('colorPicker').val();
+ if( $(this).attr('style')) {
+  $(this).removeAttr('style');
+ }
+ else{
+  $(this).attr('style', 'background-color:' + color);
+ }
+});
 }
