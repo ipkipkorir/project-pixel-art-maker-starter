@@ -5,10 +5,6 @@ var height;
 var width;
 var color;
 
-// When size is submitted by the user, call makeGrid()
-
-function makeGrid(n, m) 
-{ 
    //Choosing the size
   $('#sizePicker').submit(function (event) {
     event.preventDefault();
@@ -16,10 +12,13 @@ function makeGrid(n, m)
     width = $('#inputWeight').val();  
     makeGrid(height, width);
   });
-  
+// When size is submitted by the user, call makeGrid()
+
+function makeGrid(n, m) 
+{ 
+  $('#pixelCanvas tr').remove();
   while(n > 0)
   {
-      $('#pixelCanvas tr').remove();
       $('#pixelCanvas').append('<tr></tr>');
       for(var i = 1; i <= m; i++)
       {
