@@ -9,8 +9,17 @@ var color;
 
 function makeGrid(n, m) 
 { 
+   //Choosing the size
+  $('#sizePicker').submit(function (event) {
+    event.preventDefault();
+    height = $('#inputHeight').val();
+    width = $('#inputWeight').val();  
+    makeGrid(height, width);
+  });
+  
   while(n > 0)
   {
+      $('#pixelCanvas tr').remove();
       $('#pixelCanvas').append('<tr></tr>');
       for(var i = 1; i <= m; i++)
       {
@@ -19,14 +28,6 @@ function makeGrid(n, m)
    n--;
   }
  
- //Choosing the size
-$('#sizePicker').submit(function (event) {
-    event.preventDefault();
-    height = $('#inputHeight').val();
-    width = $('#inputWeight').val();  
-    makeGrid(height, width);
-});
-
  //Adding color to cells
  $('td').click(function addColor() {
  color = $('#colorPicker').val();
