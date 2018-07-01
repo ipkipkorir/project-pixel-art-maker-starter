@@ -11,7 +11,7 @@ $('sizePicker').submit(function (event) {
     makeGrid(height, width);
 });
 $('td').click(function addColor() {
- var color = $('colorPicker').val();
+ color = $('colorPicker').val();
  if(color.attr('style')) {
   color.removeAttr('style');
  }
