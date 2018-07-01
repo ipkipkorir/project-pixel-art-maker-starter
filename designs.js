@@ -12,11 +12,11 @@ $('sizePicker').submit(function (event) {
 });
 $('td').click(function addColor() {
  color = $('colorPicker').val();
- if(color.attr('style')) {
-  color.removeAttr('style');
+ if( $(this).attr('style')) {
+  $(this).removeAttr('style');
  }
  else{
-  color.attr('style', 'background-color:' + color);
+  $(this).attr('style', 'background-color:' + color);
  }
 });
 // When size is submitted by the user, call makeGrid()
